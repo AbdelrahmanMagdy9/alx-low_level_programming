@@ -1,18 +1,24 @@
 #include <stdio.h>
+
 /**
- * main - Prints out the larget prime factor of 612852475143
- * Return:return 0 with success.
+ * main -  checks for checks for a digit (0 through 9).
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	long i;
-	long num = 612852475143;
+	long x, y;
 
-	for (i = 2; i < num; i++)
+	x = 612852475143;
+
+	for (y = 2; x > y; y++)
 	{
-		if (num % i == 0)
-			num /= i;
+		while (x % y == 0)
+		{
+			x = x / y;
+		}
 	}
-	printf("%li\n", num);
+	printf("%lu", y);
+	putchar('\n');
 	return (0);
 }
